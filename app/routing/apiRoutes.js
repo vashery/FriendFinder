@@ -28,14 +28,7 @@ arrSum = function (arr) {
 
 module.exports = function (app) {
 
-  app.get("/api/tables", function (req, res) {
-    res.json(friendData);
-  });
-
   app.post("/api/friends", function (req, res) {
-
-
-    //console.log(req.body);
 
     comparenumbers = [];
     for (let i = 0; i < friendData.length; i++) {
@@ -50,12 +43,6 @@ module.exports = function (app) {
     }
     findSmallest(comparenumbers)
     console.log(comparenumbers)
-    //console.log(Math.min(comparenumbers));
-    //console.log(Math.min(comparenumbers));
-    //for (let i = 0; i < comparenumbers.length; i++) {
-    //  comparearray = comparenumbers[i];
-
-    //}
     friendData.push(req.body);
     res.json(friendData[findSmallest(comparenumbers)]);
   });

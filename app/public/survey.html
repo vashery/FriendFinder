@@ -24,7 +24,7 @@
         <input type="text" id="photo" class="form-control" required>
         <hr>
         <h3><strong>Question 1</strong></h3>
-        <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+        <h4>I enjoy meeting new people.</h4>
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn">(Strongly Disagree)</label>
             <label id="11" class="btn btn-warning active">
@@ -47,10 +47,10 @@
         <br>
         <br>
         <h3><strong>Question 2</strong></h3>
-        <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+        <h4>I sometimes make mistakes.</h4>
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn">(Strongly Disagree)</label>
-            <label id="21"  class="btn btn-warning active">
+            <label id="21" class="btn btn-warning active">
                 <input type="radio" name="options" id="option21" autocomplete="off" checked> 1
             </label>
             <label id="22" class="btn btn-warning">
@@ -71,7 +71,7 @@
         <br>
 
         <h3><strong>Question 3</strong></h3>
-        <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+        <h4>I enjoy repairing things.</h4>
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn">(Strongly Disagree)</label>
             <label id="31" class="btn btn-warning active">
@@ -95,7 +95,7 @@
         <br>
 
         <h3><strong>Question 4</strong></h3>
-        <h4>You rarely do something just out of sheer curiosity.</h4>
+        <h4>I see myself as disorganized, careless.</h4>
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn">(Strongly Disagree)</label>
             <label id="41" class="btn btn-warning active">
@@ -110,7 +110,7 @@
             <label id="44" class="btn btn-warning">
                 <input type="radio" name="options" id="option44" autocomplete="off"> 4
             </label>
-            <label id="45"  class="btn btn-warning">
+            <label id="45" class="btn btn-warning">
                 <input type="radio" name="options" id="option45" autocomplete="off"> 5
             </label>
             <label class="btn">(Strongly Agree)</label>
@@ -143,7 +143,7 @@
         <br>
 
         <h3><strong>Question 6</strong></h3>
-        <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+        <h4> I see myself as conventional, uncreative.</h4>
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn">(Strongly Disagree)</label>
             <label id="61" class="btn btn-warning active">
@@ -167,7 +167,7 @@
         <br>
 
         <h3><strong>Question 7</strong></h3>
-        <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+        <h4>I am someone who is inventive, finds clever ways to do things</h4>
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn">(Strongly Disagree)</label>
             <label id="71" class="btn btn-warning active">
@@ -272,34 +272,61 @@
         <hr>
 
     </div>
+    <footer class="footer">
+        <div class="container">
+            <button id="clearbutton" type="button" class="btn btn-lg btn-warning">
+                    <h4><span class="glyphicon glyphicon-list-alt"></span>Clear Friends</h4>
+                </button>
+        </div>
+    </footer>
 
     <!-- Modal -->
-    <div id="results-modal" class="modal fade" role="dialog">
+    <!-- The Modal -->
+    <div class="modal" id="results-modal">
         <div class="modal-dialog">
-
-            <!-- Modal content-->
             <div class="modal-content">
+
+                <!-- Modal Header -->
                 <div class="modal-header">
+                    <h4 class="modal-title">Results</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="modal-title"><strong>Best Match</strong></h2>
                 </div>
+
+                <!-- Modal body -->
                 <div class="modal-body">
                     <h2 id="match-name"></h2>
-                    <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg"
-                        alt="">
+                    <img class="img-fluid" id="match-img" src="" alt="">
                 </div>
+
+                <!-- Modal footer -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
 
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+    <div class="modal" id="clear-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Friends have been cleared</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
@@ -307,24 +334,34 @@
 
     <script type="text/javascript">
         // Chosen CSS
-        var currentnums = [];        
-        var numbers2 = ["11","12","13","14","15","21","22","23","24","25","31","32","33","34","35","41","42","43","44","45","51","52","53","54","55","61","62","63","64","65","71","72","73","74","75","81","82","83","84","85","91","92","93","94","95","101","102","103","104","105"]
+        var currentnums = [];
+        var numbers2 = ["11", "12", "13", "14", "15", "21", "22", "23", "24", "25", "31", "32", "33", "34", "35", "41", "42", "43", "44", "45", "51", "52", "53", "54", "55", "61", "62", "63", "64", "65", "71", "72", "73", "74", "75", "81", "82", "83", "84", "85", "91", "92", "93", "94", "95", "101", "102", "103", "104", "105"]
 
-        function getVallues(){
+        function getVallues() {
             currentnums = [];
             for (var i = 0; i < numbers2.length; i++) {
                 num = numbers2[i];
                 element = $("#" + num).hasClass("active");
                 if (element) {
                     var myString = $("#" + num).attr("id")
-                    var lastChar = myString[myString.length -1];
+                    var lastChar = myString[myString.length - 1];
                     currentnums.push(Number(lastChar));
                 }
             }
         }
+        $("#clearbutton").on("click", function (event) {
+            $.post("/api/clear", function (data) {
+                $("#clear-modal").modal("toggle");
+
+            });
+
+
+        })
+
 
         // Capture the form inputs
         $("#submit").on("click", function (event) {
+            console.log("clicked")
             getVallues()
             event.preventDefault();
 

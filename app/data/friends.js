@@ -1,7 +1,7 @@
 var friendArray = [
     {
       name: "DudeFace",
-      photo: "https://example.com",
+      photo: "https://art.pixilart.com/34545c7423d383d.png",
       scores: [
           1,
           2,
